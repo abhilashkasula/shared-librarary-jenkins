@@ -1,10 +1,10 @@
-def call(name) {
+def call(Map details) {
     pipeline {
         agent any
         stages {
             stage('Greet') {
                 steps {
-                    sh "echo ${name}"
+                    sh "echo ${details.person.name}"
                 }
             }
         }
